@@ -6,6 +6,6 @@
 
 ## 使用方法
 
-下载预编译文件。
+[下载](https://github.com/u2sb/Bcut2Srt/releases/latest)预编译文件。如果不确定电脑是否已安装 `.net core 6.0` 请选择 `scd` 版。
 
 将必剪工程文件(`文档/Bcut Drafts/一长串ID看编辑时间选最新的/xxxxxx最新的.json`)拖到 exe 文件上，就会在必剪的工程目录下生成一个 `导出字幕.srt`
