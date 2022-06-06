@@ -13,8 +13,8 @@ internal class Program
                 PropertyNameCaseInsensitive = true
             };
             var bj = JsonSerializer.Deserialize<BcutProjectJson>(bs.ReadToEnd(), options);
-            var bja = bj.tracks.SelectMany(a => a.clips).Where(b => b._30021 > 0 && b.AssetInfo.assetItemType == 236 &&
-                                                                    !string.IsNullOrWhiteSpace(b.AssetInfo.content))
+            var bja = bj.tracks.SelectMany(a => a.clips)
+                .Where(b => b._30021 > 0 && !string.IsNullOrWhiteSpace(b.AssetInfo.content))
                 .Select(c => ToSrtSingle(c._30021, c._30012, c.AssetInfo.content)).ToArray();
             var bjs = ToSrt(bja);
 
